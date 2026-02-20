@@ -15,7 +15,7 @@ export const GitOpsWrapper = styled.section`
     .gradient-wrapper {
         background: linear-gradient(245.08deg, rgba(0, 0, 0, 0.06) 49.26%, rgba(0, 211, 169, 0.5) 100%);
         width: 100%;
-        height: 40rem;
+        height: 35rem;
         position: absolute;
 
         @media only screen and (min-width: 768px) {
@@ -100,18 +100,18 @@ export const GitOpsWrapper = styled.section`
                 gap: 1.25rem;
 
                 .hero-image-container {
-                   height: 250px;
-                   width: 300px;
-                   position: relative;
-                   display:flex;
-                   align-items: center;
-                   justify-content: center;
+                  height: 250px;
+                  width: 300px;
+                  position: relative;
+                  display:flex;
+                  align-items: center;
+                  justify-content: center;
 
-                   .kanvas-stack-hero {
-                      position: absolute;
-                      height: 80px;
-                      animation: "floating 3s ease-in-out infinite";
-                   }
+                  .kanvas-stack-hero {
+                    position: absolute;
+                    height: 80px;
+                    animation: "floating 3s ease-in-out infinite";
+                  }
 
                   @media only screen and (min-width: 768px) {
                     height: 542px;

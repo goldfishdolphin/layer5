@@ -8,6 +8,7 @@ import github_icon from "../../assets/images/socialIcons/github.svg";
 import youtube_icon from "../../assets/images/socialIcons/youtube.svg";
 import docker_icon from "../../assets/images/socialIcons/docker.svg";
 import linkedin_icon from "../../assets/images/socialIcons/linkedin-light.svg";
+import bluesky_icon from "../../assets/images/socialIcons/bluesky.svg";
 import SocialLinksWrapper from "./sociallinkscolor.style";
 
 const SocialLinksColor = () => {
@@ -30,12 +31,25 @@ const SocialLinksColor = () => {
             <img className="slack" height="30px" src={slack_icon} alt="slack" />
           </a>
           <a
-            href="https://twitter.com/layer5"
+            href="https://x.com/layer5"
             target="_blank"
             rel="noreferrer"
             className="footer_twitter"
           >
             <TwitterIcon />
+          </a>
+          <a
+            className="bluesky_icon"
+            href="https://bsky.app/profile/layer5.bsky.social"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className="bluesky"
+              height="30px"
+              src={bluesky_icon}
+              alt="bluesky"
+            />
           </a>
           <a
             href="https://github.com/layer5io"
@@ -59,7 +73,7 @@ const SocialLinksColor = () => {
           </a>
           <a
             className="youtube_icon"
-            href="https://www.youtube.com/channel/UCFL1af7_wdnhHXL1InzaMvA?sub_confirmation=1"
+            href="https://youtube.com/Layer5io?sub_confirmation=1"
             target="_blank"
             rel="noreferrer"
           >

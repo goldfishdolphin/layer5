@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ComponentsWrapper } from "./Component.style";
-import { CatalogCard, SistentThemeProviderWithoutBaseLine } from "@layer5/sistent";
+import { CatalogCard, SistentThemeProviderWithoutBaseLine } from "@sistent/sistent";
 import axios from "axios";
 import { useStyledDarkMode } from "../../../../theme/app/useStyledDarkMode";
 import Button from "../../../../reusecore/Button";
@@ -52,7 +52,13 @@ const CatalogGrid = ({ frontmatter }) => {
             return (
               <CatalogCard
                 key={index}
-                cardLink={`https://cloud.layer5.io/catalog/content/catalog/${item?.id}`}
+                onCardClick={() => {
+                  window.open(
+                    `https://cloud.layer5.io/catalog/content/catalog/${item?.id}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }}
                 cardHeight="20rem"
                 cardWidth="16rem"
                 pattern={item}

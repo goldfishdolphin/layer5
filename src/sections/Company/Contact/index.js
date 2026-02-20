@@ -7,7 +7,6 @@ import Partner_Icon from "../../../assets/images/contact/partner.svg";
 import Contact_Icon from "../../../assets/images/contact/contact.svg";
 import CardOutline from "../../../components/Card-Outline";
 import ContactPageWrapper from "./contactpage.style";
-import ContactForm from "../../../components/ContactForm";
 import CommonForm from "../../../components/CommonForm";
 
 const ContactPage = () => {
@@ -25,7 +24,8 @@ const ContactPage = () => {
         />
         <Row style={{
           flexWrap: "wrap"
-        }} className="cards-container">
+        }} className="cards-container"
+        >
           <CardOutline
             link="/careers"
             img={Jobs_Icon}
@@ -50,7 +50,8 @@ const ContactPage = () => {
         </Row>
         <Row style={{
           flexWrap: "wrap"
-        }} className="contact-form-row">
+        }} className="contact-form-row"
+        >
           <Row
             onClick={function () {
               toggleForm();
@@ -65,7 +66,6 @@ const ContactPage = () => {
           </Row>
           <div className="contact-form" ref={expandForm}>
             <Container>
-              {/* <ContactForm /> */}
               <Col $lg={5} $md={6} $sm={12} style={{ padding: "0", marginLeft: "auto", marginRight: "auto" }}>
                 <CommonForm
                   title="Contact us"

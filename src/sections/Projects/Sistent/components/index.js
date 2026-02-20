@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container } from "../../../../reusecore/Layout";
 import SistentWrapper from "../sistent.style";
 import TOC from "../../../../components/SistentNavigation";
-// import SistentPagination from "../../../../components/SistentNavigation/pagination";
 import SearchBox from "../../../../reusecore/Search";
 import useDataList from "../../../../utils/usedataList";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
@@ -58,14 +57,14 @@ const SistentComponents = () => {
                       </div>
                       <div>
                         <div className="card_bottom">
-                          <a className="learn" href={comp.url}>
+                          <div className="learn" href={comp.url}>
                             <div className="learn-more">
                               <div>Learn more</div>
                               <div className="icon">
                                 <FaArrowRight />
                               </div>
                             </div>
-                          </a>
+                          </div>
                         </div>
                       </div>
                     </div>

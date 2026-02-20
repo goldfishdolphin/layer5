@@ -15,19 +15,19 @@ const Integrations = () => {
           if (location.pathname !== "/") {
             return (
               <>
-                <IntegrationsGrid  count={"All"} />
+                <IntegrationsGrid count={"All"} />
                 <Card />
-                <FAQ category={["Meshery Integrations"]} />
+                <FAQ category={["Meshery"]} subcategory={["Integrations"]} />
               </>
             );
           } else {
             return (
               <>
-                <IntegrationsGrid  count={13} />
+                <IntegrationsGrid count={13} />
                 <div style={{ marginTop: "20px" }}>
                   <Button className="seeAllBtn"
-                    $primary                    title={"See All"}
-                    $url="/cloud-native-management/meshery/integrations/"
+                    $primary title={"See All"}
+                    $url="cloud-native-management/meshery/integrations/"
                   />
                 </div>
               </>

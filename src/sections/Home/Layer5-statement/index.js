@@ -29,13 +29,13 @@ const BannerDefault = () => {
                   {/* <h4 className="statement">We make cloud native manageable by </h4> */}
                   <h2 className="statement">
                     <span>
-                      harnessing the unique position service meshes have in changing how developers write applications and how operators run modern infrastructure.
+                      harnessing the unique position Kubernetes has in changing how developers write applications and how operators run modern infrastructure.
                     </span>
                   </h2>
                   {/* <img className="Layer5Logo" src={Layer5Logo} /> */}
                   <h3 className="statement">
                     {/* Enablers of Engineers. Enablers of Speed. Enablers of Business. */}
-                    Layer5 is an empowerer of the developer, the operator, and the service owner
+                    Layer5 empowers developers, operators, and service owners alike
                   </h3>
                   <div className="join-community">
                     <Button $primary className="join-community-button" title="our projects" $url="/projects" />

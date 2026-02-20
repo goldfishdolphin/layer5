@@ -8,7 +8,7 @@ import JoinCommunity from "../Community/Join-community";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import { FaUsers } from "@react-icons/all-files/fa/FaUsers";
 import CommunitySectionWrapper from "./community.style";
-import Five from "./Community-pictures/community.png";
+import Five from "./Community-pictures/community.webp";
 import NewcomersMap from "./Newcomers-guide/newcomers-map.js";
 import DiscussCallout from "../../sections/Discuss-Callout";
 import { ReactComponent as MeshmateIcon } from "../../assets/images/meshmate/meshmate-stack-colorMode.svg";
@@ -18,10 +18,10 @@ import { BgImage } from "gbimage-bridge";
 import useHasMounted from "../../utils/useHasMounted";
 import InlineQuotes from "../../components/Inline-quotes";
 import AdventuresCallout from "../Adventures-Callout";
-// import PictureSlider from "./slider";
+import PictureSlider from "./slider";
 
 const CommunityMember = "./Community-pictures/five.svg";
-const Picture = "./Community-pictures/join-the-community.png";
+// const Picture = "./Community-pictures/join-the-community.png";
 
 const CommunityPage = () => {
 
@@ -59,7 +59,8 @@ const CommunityPage = () => {
         <Container>
           <Row style={{
             flexWrap: "wrap"
-          }} className="service-mesh-projects">
+          }} className="service-mesh-projects"
+          >
             <Col $sm={12} $lg={6}>
               <h2>Warm, welcoming, and encouraging. Embrace developer-defined infrastructure and help empower every engineer with us.</h2>
               <p>
@@ -73,7 +74,8 @@ const CommunityPage = () => {
           </Row>
           <Row style={{
             flexWrap: "wrap"
-          }} className="open-source-projects">
+          }} className="open-source-projects"
+          >
             <h2>Open Source and Cloud Native</h2>
             <p>
               Layer5 projects are open source software. Anyone can download,
@@ -100,11 +102,62 @@ const CommunityPage = () => {
               <Button $primary title="See our community member profiles" $url="/community/members" />
             </Col>
             <Col className="slider" $sm={12} $lg={6}>
-              <StaticImage src={Picture} alt="Five_with_banner" />
-              {/* <PictureSlider /> */}
+              {/* <StaticImage src={Picture} alt="Five_with_banner" /> */}
+              <PictureSlider />
             </Col>
           </Row>
         </div>
+        <Container>
+          <Row className="recognition-program meshmate">
+            <div className="recognition-content">
+              <div className="badges-section">
+                <div className="badge-stack">
+                  <div className="badge-item">
+                    <img
+                      src="https://badges.layer5.io/assets/badges/docker-captain/docker-captain.png"
+                      alt="Docker Captain Badge"
+                    />
+                  </div>
+                  <div className="badge-item">
+                    <img
+                      src="https://badges.layer5.io/assets/badges/cncf-ambassador/cncf-ambassador.png"
+                      alt="CNCF Ambassador Badge"
+                    />
+                  </div>
+                  <div className="badge-item">
+                    <img
+                      src="https://badges.layer5.io/assets/badges/meshmate/meshmate.png"
+                      alt="Meshmate Badge"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Col className="content">
+                <h1 className="subtitle">Your Achievements, Recognized</h1>
+                <h1>Layer5 Recognition Program</h1>
+                <p>
+                  The <strong>Layer5 Recognition Program</strong> is more than a
+                  badge. It's a testament to your skills, dedication, and impact
+                  in the cloud-native ecosystem. Every contribution – big or
+                  small – is a step toward earning a badge that tells your
+                  unique story.
+                </p>
+                <p>
+                  Showcase your journey, connect with peers, and let the world
+                  see the milestones you've achieved. Whether you're solving
+                  challenges, sharing knowledge, or coding solutions, there's a
+                  badge waiting for you.
+                </p>
+                <Button
+                  $primary
+                  title="Explore Badges Now"
+                  $url="https://badges.layer5.io"
+                />
+              </Col>
+            </div>
+          </Row>
+        </Container>
         <Container>
           <Row className="meshmate">
             <Col className="content" $sm={12} $lg={6}>

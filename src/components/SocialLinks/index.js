@@ -6,6 +6,7 @@ import twitter_icon from "../../assets/images/socialIcons/twitter-light.svg";
 import github_icon from "../../assets/images/socialIcons/github_white_trim.svg";
 import youtube_icon from "../../assets/images/socialIcons/youtube.svg";
 import docker_icon from "../../assets/images/socialIcons/docker.svg";
+import bluesky_icon from "../../assets/images/socialIcons/bluesky.svg";
 import SocialIconWrapper from "./socialicon.style";
 
 const SocialLinks = () => {
@@ -28,11 +29,19 @@ const SocialLinks = () => {
             <img className="slack" height="40 px" src={slack_icon} alt="slack" />
           </a>
           <a
-            href="https://twitter.com/layer5"
+            href="https://x.com/layer5"
             target="_blank"
             rel="noreferrer"
           >
             <img className="twitter" height="40 px" src={twitter_icon} alt="twitter" />
+          </a>
+          <a
+            className="bluesky_icon"
+            href="https://bsky.app/profile/layer5.bsky.social"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="bluesky" height="40 px" src={bluesky_icon} alt="bluesky" />
           </a>
           <a
             href="https://github.com/layer5io"

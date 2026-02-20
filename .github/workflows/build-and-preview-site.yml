@@ -16,10 +16,13 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm install --legacy-peer-deps
-          node -v
-          npm run version
-          npm run noIndex
+          make setup
+          make build
+
+      - name: Broken Link Check 🔗
+        uses: technote-space/broken-link-checker-action@v2
+        with:
+          target: ./public/**/*.html  
 
       - name: Zip Site
         run: bash ./script.sh

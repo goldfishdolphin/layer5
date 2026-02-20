@@ -7,32 +7,41 @@ const themes = { light: lighttheme, dark: darktheme };
 const MagicScriptTag = (props) => {
   const codeToRunOnClient = `
       (function() {
+          // 1. Keeps SYSTEM as the priority preference
           const themeFromLocalStorage = localStorage.getItem('${DarkThemeKey}') || '${ThemeSetting.SYSTEM}';
-          const systemDarkModeSetting = () => window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-          const isDarkModeActive = () => {
-              return !!systemDarkModeSetting()?.matches;
+
+          // 2. We change the check to look for LIGHT mode explicitly
+          const systemLightModeSetting = () => window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+          
+          const isLightModeActive = () => {
+              return !!systemLightModeSetting()?.matches;
           };
+
           let colorMode;
           switch (themeFromLocalStorage) {
               case '${ThemeSetting.SYSTEM}':
-                colorMode = isDarkModeActive() ? '${ThemeSetting.DARK}' : '{ThemeSetting.LIGHT}'
+                // LOGIC CHANGE: If Light is active -> Light. Otherwise (Dark, No Preference, or Error) -> Dark.
+                colorMode = isLightModeActive() ? '${ThemeSetting.LIGHT}' : '${ThemeSetting.DARK}'
                 break
               case '${ThemeSetting.DARK}':
               case '${ThemeSetting.LIGHT}':
                 colorMode = themeFromLocalStorage
                 break
               default:
-                  colorMode = '${ThemeSetting.LIGHT}'
+                  // 3. Fallback to DARK in case of error
+                  colorMode = '${ThemeSetting.DARK}'
             }
+
           const root = document.documentElement;
           const iterate = (obj) => {
-              Object.keys(obj).forEach(key => {
-                 if (typeof obj[key] === 'object') {
-                      iterate(obj[key])
-                 } else {
-                   root.style.setProperty("--" + key, obj[key])
-                 }
-                 })
+            if (!obj) return;
+            Object.keys(obj).forEach(key => {
+              if (typeof obj[key] === 'object') {
+                iterate(obj[key])
+              } else {
+                root.style.setProperty("--" + key, obj[key])
+              }
+            })
           }
           const parsedTheme = JSON.parse('${JSON.stringify(props.theme)}')
           const theme = parsedTheme[colorMode]

@@ -2,7 +2,6 @@ import React from "react";
 
 import SEO from "../components/seo";
 import Partners from "../sections/Home/Partners-home";
-import Integrations from "../sections/Home/Playground-home";
 import Banner from "../sections/Home/Banner";
 import loadable from "@loadable/component";
 import CornerPopup from "../components/Corner-popup";
@@ -24,7 +23,6 @@ const IndexPage = () => {
     <>
       <Banner />
       <FeaturesContainer />
-      <Integrations />
       <Partners />
       <CornerPopup/>
       {/* <ServiceMeshManagement /> */}
@@ -63,8 +61,9 @@ export const Head = () => {
     ]
   };
   return (
-    <SEO title="Layer5" description="An empowerer of engineers, Layer5 helps you extract more value from your infrastructure. Creator and maintainer of cloud native standards. Maker of Meshery, the cloud native manager."
-      schemaMarkup={schema} />
+    <SEO title="Layer5" description="Layer5 is the steward of the Meshery and creator of Kanvas, the collaborative canvas for cloud-native infrastructure. We bridge the gap between design and operation, allowing engineers to create, configure, and deploy orchestratable diagrams in real time. Whether managing Kubernetes or multi-cloud environments, Layer5 provides the tooling needed to oversee modern infrastructure with confidence."
+      schemaMarkup={schema}
+    />
   );
 };
 export default IndexPage;

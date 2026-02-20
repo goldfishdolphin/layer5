@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 const NavigationWrap = styled.header`
   width: 100vw;
+  position: sticky;
   z-index: 9999;
   top: 0;
   background-color: ${(props) => props.theme.body};
   transition-property: color, background-color;
   transition-duration: 0.8s;
   transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  font-family: "Qanelas Soft", "Open Sans", sans-serif;
 
   .nav-container {
     display: flex;
@@ -646,6 +648,15 @@ const NavigationWrap = styled.header`
     }
     .mobile-sub-menu-item {
       font-size: 1.1rem;
+    }
+    .mobile-sub-action-item {
+      font-size: 1.1rem;
+      padding-left: 30px;
+      padding-top: 0.4rem;
+    }
+    .mobile-nested-menu {
+       font-size: 1.1rem;
+       margin-left: 1rem;
     }
   }
 
